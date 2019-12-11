@@ -57,7 +57,7 @@
 </div>
 
 
-<div class="service-details row env-details relative">
+<div class="service-details row env-details relative"  [ngClass]="{adjustableHeight: environmnt.endpoint == undefined, centerLoader: isLoading}">
 	<div *ngIf='envResponseTrue'>
 		<div   class='edit-service-overview-btn'>
 			<!-- <btn-jazz-secondary class='btn-edit-overview' *ngIf='showCancel'  text='CANCEL' (click)='onCancelClick()' ></btn-jazz-secondary> -->
@@ -110,7 +110,7 @@
 				</li>
 			</ul>
       <ul class="section-right">
-        <li>
+        <li class="first-list">
 					<div class="det-label">Branch Name</div>
 					<div class="det-value">{{branchname}}</div>
 				</li>
